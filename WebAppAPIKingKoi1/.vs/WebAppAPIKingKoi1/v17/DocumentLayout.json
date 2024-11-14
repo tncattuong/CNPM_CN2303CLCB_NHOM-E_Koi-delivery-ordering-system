@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\OneDrive\\Desktop\\WebAppAPIKingKoi1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{95AA8B8E-9251-4D9E-9498-02981F054937}|WebAppAPIKingKoi1.csproj|c:\\users\\asus\\onedrive\\desktop\\webappapikingkoi1\\controllers\\khachhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95AA8B8E-9251-4D9E-9498-02981F054937}|WebAppAPIKingKoi1.csproj|solutionrelative:controllers\\khachhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95AA8B8E-9251-4D9E-9498-02981F054937}|WebAppAPIKingKoi1.csproj|c:\\users\\asus\\onedrive\\desktop\\webappapikingkoi1\\mymodels\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95AA8B8E-9251-4D9E-9498-02981F054937}|WebAppAPIKingKoi1.csproj|solutionrelative:mymodels\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95AA8B8E-9251-4D9E-9498-02981F054937}|WebAppAPIKingKoi1.csproj|c:\\users\\asus\\onedrive\\desktop\\webappapikingkoi1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95AA8B8E-9251-4D9E-9498-02981F054937}|WebAppAPIKingKoi1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Desktop\\WebAppAPIKingKoi1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Desktop\\WebAppAPIKingKoi1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAwwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T16:12:50.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "KhachHang.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Desktop\\WebAppAPIKingKoi1\\MyModels\\KhachHang.cs",
+              "RelativeDocumentMoniker": "MyModels\\KhachHang.cs",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Desktop\\WebAppAPIKingKoi1\\MyModels\\KhachHang.cs",
+              "RelativeToolTip": "MyModels\\KhachHang.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAwwB8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T15:59:37.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KhachHangController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\OneDrive\\Desktop\\WebAppAPIKingKoi1\\Controllers\\KhachHangController.cs",
+              "RelativeDocumentMoniker": "Controllers\\KhachHangController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\OneDrive\\Desktop\\WebAppAPIKingKoi1\\Controllers\\KhachHangController.cs",
+              "RelativeToolTip": "Controllers\\KhachHangController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAASwB4AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T15:51:53.631Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
