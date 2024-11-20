@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\WebAppAPIKingKoi1.props" />
-</Project>
