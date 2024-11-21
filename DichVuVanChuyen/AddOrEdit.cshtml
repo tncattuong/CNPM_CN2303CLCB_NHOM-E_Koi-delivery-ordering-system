@@ -1,0 +1,72 @@
+﻿@using KDOS.Repository.Models
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .form-group input,
+        .form-group select {
+            border: 1px solid orangered;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .button-save {
+            background-color: orangered;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border: 2px solid #ff5722;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .button-save:hover {
+            background-color: #ff5722;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>@ViewData["Title"]</h3>
+        <form method="post">
+            <div class="form-group">
+                <label for="MaDichVu">Mã Dịch Vụ Vận Chuyển</label>
+                <input asp-for="DichVuVanChuyen.MaDichVu" class="form-control" />
+                <span asp-validation-for="DichVuVanChuyen.MaDichVu" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="TenDichVu">Tên Dịch Vụ</label>
+                <input asp-for="DichVuVanChuyen.TenDichVu" class="form-control" />
+                <span asp-validation-for="DichVuVanChuyen.TenDichVu" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="PhuongThuc">Phương Thức Vận Chuyển</label>
+                <input asp-for="DichVuVanChuyen.PhuongThuc" class="form-control" />
+                <span asp-validation-for="DichVuVanChuyen.PhuongThuc" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="DonViVanChuyen">Đơn Vị Vận Chuyển</label>
+                <input asp-for="DichVuVanChuyen.DonViVanChuyen" class="form-control" />
+                <span asp-validation-for="DichVuVanChuyen.DonViVanChuyen" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="GiaCuoc">Giá Cước</label>
+                <input asp-for="DichVuVanChuyen.GiaCuoc" class="form-control" />
+                <span asp-validation-for="DichVuVanChuyen.GiaCuoc" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="button-save">Lưu</button>
+        </form>
+    </div>
+</body>
+</html>
