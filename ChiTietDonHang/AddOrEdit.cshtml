@@ -1,0 +1,72 @@
+﻿@using KDOS.Repository.Models
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .form-group input,
+        .form-group select {
+            border: 1px solid orangered;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .button-save {
+            background-color: orangered;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border: 2px solid #ff5722;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .button-save:hover {
+            background-color: #ff5722;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>@ViewData["Title"]</h3>
+        <form method="post">
+            <div class="form-group">
+                <label for="MaChiTiet">Mã Chi Tiết Đơn Hàng</label>
+                <input asp-for="ChiTietDonHang.MaChiTiet" class="form-control" />
+                <span asp-validation-for="ChiTietDonHang.MaChiTiet" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="MaDonHang">Mã Đơn Hàng</label>
+                <input asp-for="ChiTietDonHang.MaDonHang" class="form-control" />
+                <span asp-validation-for="ChiTietDonHang.MaDonHang" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="MaCa">Mã Cá Koi</label>
+                <input asp-for="ChiTietDonHang.MaCa" class="form-control" />
+                <span asp-validation-for="ChiTietDonHang.MaCa" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="SoLuong">Số Lượng</label>
+                <input asp-for="ChiTietDonHang.SoLuong" class="form-control" />
+                <span asp-validation-for="ChiTietDonHang.SoLuong" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="Gia">Giá Cá</label>
+                <input asp-for="ChiTietDonHang.Gia" class="form-control" />
+                <span asp-validation-for="ChiTietDonHang.Gia" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="button-save">Lưu</button>
+        </form>
+    </div>
+</body>
+</html>

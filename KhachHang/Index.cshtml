@@ -1,0 +1,70 @@
+﻿@using KDOS.Repository.Models
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .btn-action {
+            background-color: orangered;
+            color: white;
+        }
+
+        .btn-action:hover {
+            background-color: white;
+            color: orangered;
+            border: 2px solid #ff5722;
+        }
+
+        .table-responsive {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>@ViewData["Title"]</h3>
+        <p>Danh sách khách hàng hiện tại.</p>
+
+        <a href="@Url.Page("/KhachHangAddOrEdit")" class="btn btn-success btn-sm">Thêm Mới</a>
+
+        <div class="table-responsive mt-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Mã Khách</th>
+                        <th>Tên Khách</th>
+                        <th>Địa Chỉ</th>
+                        <th>SĐT</th>
+                        <th>Email</th>
+                        <th>Giới Tính</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.KhachHangs)
+                    {
+                        <tr>
+                            <td>@item.MaKhach</td>
+                            <td>@item.TenKhach</td>
+                            <td>@item.DiaChiKhach</td>
+                            <td>@item.SoDienThoai</td>
+                            <td>@item.Email</td>
+                            <td>@item.GioiTinh</td>
+                            <td>
+                                <a href="@Url.Page("/KhachHangAddOrEdit", new { id = item.MaKhach })" class="btn btn-warning btn-sm">Sửa</a>
+                                <form method="post" asp-page-handler="Delete" asp-route-id="@item.MaKhach" style="display:inline;">
+                                    <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
