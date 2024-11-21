@@ -1,0 +1,48 @@
+﻿
+@page
+@model Admin_Views_BangGia_Index
+@using KDOS.Repository.Models
+@{
+    Layout = "~/Admin/Pages/Shared/_Layout.cshtml";
+    <!-- Thiết lập Layout cho trang này -->
+    ViewData["Title"] = "Chỉnh sửa bảng giá";
+}
+    <div class="container">
+        <h3>@ViewData["Title"]</h3>
+        <p>Danh sách các mức giá vận chuyển hiện tại.</p>
+
+        <a href="@Url.Page("/BangGiaAddOrEdit")" class="btn btn-success btn-sm">Thêm Mới</a>
+
+        <div class="table-responsive mt-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Ma Gia</th>
+                        <th>Ma Ca</th>
+                        <th>Gia Van Chuyen</th>
+                        <th>Ngay Bat Dau</th>
+                        <th>Ngay Ket Thuc</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (<)
+                    {
+                        <tr>
+                            <td>@item.MaGia</td>
+                            <td>@item.MaCaNavigation.TenCa</td>
+                            <td>@item.GiaVanChuyen</td>
+                            <td>@item.NgayBatDau.ToString("yyyy-MM-dd")</td>
+                            <td>@item.NgayKetThuc.ToString("yyyy-MM-dd")</td>
+                            <td>
+                                <a href="@Url.Page("/BangGiaAddOrEdit", new { id = item.MaGia })" class="btn btn-warning btn-sm">Sửa</a>
+                                <form method="post" asp-page-handler="Delete" asp-route-id="@item.MaGia" style="display:inline;">
+                                    <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
