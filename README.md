@@ -1,32 +1,20 @@
                                   Nhóm E-KOI DELIVERY ORDERING SYSTEM
-Danh sách thành viên                          
-Họ và tên
-MSSV
-Địa chỉ tài khoản github
-Nguyễn Minh Khôi
-080205007258
-khoinm7258@ut.edu.vn
-Huỳnh Tình Thâm
-091205016596
-thamht6596@ut.edu.vvn
-Lại Thái Thuận
-079205019923
-thuanlt9923@ut.edu.vn
-Triệu Nguyễn Cát Tường
-038305021188
-tuongtnc1188@ut.edu.vn
-Huỳnh Gia Bảo
-079205015880
-giabaotech1414@gmail.com
-Trần Gia Huy
-070205003522
-huytg3522@ut.edu.vn
-Nguyễn Thị Bích Thùy
-089305002034
-thuy181117@gmail.com
-
-
-
+Hệ thống quản lý dịch vụ vận chuyển cá Koi của công ty
+- Trang chủ giới thiệu công ty vận chuyển, dịch vụ vận chuyển, bảng giá, chính sách, blog chia sẽ, tin tức, câu hỏi thường gặp,
+...
+- Chức năng cho phép khách hàng đặt đơn vận chuyển theo: khối lượng và số lượng cá Koi, phương thức vận chuyển, địa
+điểm xuất phát và địa điểm đến, các dịch vụ gia tăng khác, ...
+- Quản lý quá trình vận chuyển từ lúc đặt đơn vận chuyển cho tới khi vận chuyển hoàn tất.
+ << Khách hàng đặt đơn vận chuyển --> Công ty nhận cá, kiểm tra sức khỏe và thực hiện đóng gói --> Công ty thực hiện
+vận chuyển và chăm sóc cá trong quá trình vận chuyển --> Công ty thực hiện thủ tục nhập khẩu nếu vận chuyển từ nước ngoài --
+> Công ty bàn giao cá và giấy chứng nhận liên quan (xuất xứ, sức khỏe, giải thưởng, ...) đến khách hàng và hỗ trợ cho đến khi
+cá thích nghi môi trường mới >>
+- Quản lý bảng giá áp dụng cho dịch vụ vận chuyển.
+- Quản lý việc sắp xếp các đơn vận chuyển phù hợp cho các chuyến vận chuyển.
+- Quản lý rating, feedback.
+- Quản lý hồ sơ khách hàng, lịch sử đơn vận chuyển.
+- Dashboard & Report.
+Link tham khảo: https://ezbuy.jp/vi/resource/blog/dich-vu-van-chuyen-ca-koi-nhat
 
 
 
