@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .btn-action {
+            background-color: orangered;
+            color: white;
+        }
+
+        .btn-action:hover {
+            background-color: white;
+            color: orangered;
+            border: 2px solid #ff5722;
+        }
+
+        .table-responsive {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>@ViewData["Title"]</h3>
+        <p>Danh sách các đơn hàng hiện tại.</p>
+
+        <a href="@Url.Page("/DonHangAddOrEdit")" class="btn btn-success btn-sm">Thêm Mới</a>
+
+        <div class="table-responsive mt-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Mã Đơn Hàng</th>
+                        <th>Mã Khách Hàng</th>
+                        <th>Mã Vận Chuyển</th>
+                        <th>Ngày Đặt</th>
+                        <th>Ngày Giao</th>
+                        <th>Tổng Giá Trị</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.DonHangs)
+                    {
+                        <tr>
+                            <td>@item.MaDonHang</td>
+                            <td>@item.MaKhach</td>
+                            <td>@item.MaVanChuyen</td>
+                            <td>@item.NgayDatHang.ToString("dd/MM/yyyy")</td>
+                            <td>@item.NgayGiaoHang.ToString("dd/MM/yyyy")</td>
+                            <td>@item.TongGiaTri.ToString("N0") VND</td>
+                            <td>
+                                <a href="@Url.Page("/DonHangAddOrEdit", new { id = item.MaDonHang })" class="btn btn-warning btn-sm">Sửa</a>
+                                <form method="post" asp-page-handler="Delete" asp-route-id="@item.MaDonHang" style="display:inline;">
+                                    <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

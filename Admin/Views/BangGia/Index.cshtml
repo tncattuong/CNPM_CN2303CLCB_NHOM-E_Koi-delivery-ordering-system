@@ -1,0 +1,71 @@
+﻿@using static KDOS.Web.Controllers.BangGiaController
+
+
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+             .btn-action {
+            background-color: orangered;
+
+            color: white;
+        }
+
+        .btn-action:hover {
+            background-color: white;
+            color: orangered;
+            border: 2px solid #ff5722;
+        }
+
+        .table-responsive {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>@ViewData["Title"]</h3>
+        <p>Danh sách các mức giá vận chuyển hiện tại.</p>
+
+        <a href="@Url.Page("/BangGiaAddOrEdit")" class="btn btn-success btn-sm">Thêm Mới</a>
+
+        <div class="table-responsive mt-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Ma Gia</th>
+                        <th>Ma Ca</th>
+                        <th>Gia Van Chuyen</th>
+                        <th>Ngay Bat Dau</th>
+                        <th>Ngay Ket Thuc</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.BangGias)
+                    {
+                        <tr>
+                            <td>@item.MaGia</td>
+                            <td>@item.MaCaNavigation.TenCa</td>
+                            <td>@item.GiaVanChuyen</td>
+                            <td>@item.NgayBatDau.ToString("yyyy-MM-dd")</td>
+                            <td>@item.NgayKetThuc.ToString("yyyy-MM-dd")</td>
+                            <td>
+                                <a href="@Url.Page("/BangGiaAddOrEdit", new { id = item.MaGia })" class="btn btn-warning btn-sm">Sửa</a>
+                                <form method="post" asp-page-handler="Delete" asp-route-id="@item.MaGia" style="display:inline;">
+                                    <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </body>
+    </html>

@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .btn-action {
+            background-color: orangered;
+            color: white;
+        }
+
+            .btn-action:hover {
+                background-color: white;
+                color: orangered;
+                border: 2px solid #ff5722;
+            }
+
+        .table-responsive {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>@ViewData["Title"]</h3>
+        <p>Danh sách các dịch vụ vận chuyển.</p>
+
+        <a href="@Url.Page("/DichVuVanChuyenAddOrEdit")" class="btn btn-success btn-sm">Thêm Mới</a>
+
+        <div class="table-responsive mt-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Mã Dịch Vụ</th>
+                        <th>Tên Dịch Vụ</th>
+                        <th>Phương Thức Vận Chuyển</th>
+                        <th>Đơn Vị Vận Chuyển</th>
+                        <th>Giá Cước</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.DichVuVanChuyens)
+                    {
+                        <tr>
+                            <td>@item.MaDichVu</td>
+                            <td>@item.TenDichVu</td>
+                            <td>@item.PhuongThuc</td>
+                            <td>@item.DonViVanChuyen</td>
+                            <td>@item.GiaCuoc.ToString("N0") VND</td>
+                            <td>
+                                <a href="@Url.Page("/DichVuVanChuyenAddOrEdit", new { id = item.MaDichVu })" class="btn btn-warning btn-sm">Sửa</a>
+                                <form method="post" asp-page-handler="Delete" asp-route-id="@item.MaDichVu" style="display:inline;">
+                                    <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KDOS.Repository\KDOS.Repository.csproj" />
+    <ProjectReference Include="..\KDOS.Service\KDOS.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\config" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\description" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\HEAD" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\hooks\applypatch-msg.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\hooks\commit-msg.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\hooks\fsmonitor-watchman.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\hooks\post-update.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\hooks\pre-applypatch.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\hooks\pre-commit.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\hooks\pre-merge-commit.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\hooks\pre-push.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\hooks\pre-rebase.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\hooks\pre-receive.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\hooks\prepare-commit-msg.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\hooks\push-to-checkout.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\hooks\sendemail-validate.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\hooks\update.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\index" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\info\exclude" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\logs\HEAD" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\logs\refs\heads\master" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\logs\refs\remotes\origin\HEAD" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\objects\pack\pack-ec755d18e0a085c3ffebbb1e877e44bc96d2629a.idx" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\objects\pack\pack-ec755d18e0a085c3ffebbb1e877e44bc96d2629a.pack" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\objects\pack\pack-ec755d18e0a085c3ffebbb1e877e44bc96d2629a.rev" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\packed-refs" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\refs\heads\master" />
+    <None Include="wwwroot\LayoutWebsite\LoginAdmin\.git\refs\remotes\origin\HEAD" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\config" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\description" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\HEAD" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\hooks\applypatch-msg.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\hooks\commit-msg.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\hooks\fsmonitor-watchman.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\hooks\post-update.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\hooks\pre-applypatch.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\hooks\pre-commit.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\hooks\pre-merge-commit.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\hooks\pre-push.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\hooks\pre-rebase.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\hooks\pre-receive.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\hooks\prepare-commit-msg.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\hooks\push-to-checkout.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\hooks\sendemail-validate.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\hooks\update.sample" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\index" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\info\exclude" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\logs\HEAD" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\logs\refs\heads\main" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\logs\refs\remotes\origin\HEAD" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\objects\pack\pack-764bf472e1aa070c0d7d0d1e64f53e5f45ea3e1e.idx" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\objects\pack\pack-764bf472e1aa070c0d7d0d1e64f53e5f45ea3e1e.pack" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\objects\pack\pack-764bf472e1aa070c0d7d0d1e64f53e5f45ea3e1e.rev" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\packed-refs" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\refs\heads\main" />
+    <None Include="wwwroot\LayoutWebsite\LoginUserPage\.git\refs\remotes\origin\HEAD" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\LayoutWebsite\LoginAdmin\.git\objects\info\" />
+    <Folder Include="wwwroot\LayoutWebsite\LoginAdmin\.git\refs\tags\" />
+    <Folder Include="wwwroot\LayoutWebsite\LoginUserPage\.git\objects\info\" />
+    <Folder Include="wwwroot\LayoutWebsite\LoginUserPage\.git\refs\tags\" />
+  </ItemGroup>
+
+</Project>

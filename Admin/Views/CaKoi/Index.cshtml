@@ -1,0 +1,71 @@
+﻿@using static KDOS.Web.Controllers.CaKoiController
+
+
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .btn-action {
+            background-color: orangered;
+            color: white;
+        }
+
+        .btn-action:hover {
+            background-color: white;
+            color: orangered;
+            border: 2px solid #ff5722;
+        }
+
+        .table-responsive {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>@ViewData["Title"]</h3>
+        <p>Danh sách các cá koi trong hệ thống.</p>
+
+        <a href="@Url.Page("/CaKoiAddOrEdit")" class="btn btn-success btn-sm">Thêm Mới</a>
+
+        <div class="table-responsive mt-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Mã Cá</th>
+                        <th>Tên Cá</th>
+                        <th>Loại Cá</th>
+                        <th>Kích Thước (cm)</th>
+                        <th>Trọng Lượng (kg)</th>
+                        <th>Tuổi</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.CaKoies)
+                    {
+                        <tr>
+                            <td>@item.MaCa</td>
+                            <td>@item.TenCa</td>
+                            <td>@item.LoaiCa</td>
+                            <td>@item.KichThuoc</td>
+                            <td>@item.TrongLuong</td>
+                            <td>@item.Tuoi</td>
+                            <td>
+                                <a href="@Url.Page("/CaKoiAddOrEdit", new { id = item.MaCa })" class="btn btn-warning btn-sm">Sửa</a>
+                                <form method="post" asp-page-handler="Delete" asp-route-id="@item.MaCa" style="display:inline;">
+                                    <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

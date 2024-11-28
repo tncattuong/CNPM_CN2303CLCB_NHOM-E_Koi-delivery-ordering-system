@@ -1,0 +1,69 @@
+﻿
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .form-group input,
+        .form-group select {
+            border: 1px solid orangered;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .button-save {
+            background-color: orangered;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border: 2px solid #ff5722;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .button-save:hover {
+            background-color: #ff5722;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3>@ViewData["Title"]</h3>
+    <form method="post">
+        <div class="mb-3">
+            <label for="MaCa" class="form-label">Tên Ca</label>
+            <select asp-for="BangGia.MaCa" asp-items="@(new SelectList(ViewBag.CaKois, "MaCa", "TenCa"))" class="form-select">
+                <option value="">Chọn Ca</option>
+            </select>
+            <span asp-validation-for="BangGia.MaCa" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="GiaVanChuyen" class="form-label">Giá Vận Chuyển</label>
+            <input asp-for="BangGia.GiaVanChuyen" class="form-control" />
+            <span asp-validation-for="BangGia.GiaVanChuyen" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="NgayBatDau" class="form-label">Ngày Bắt Đầu</label>
+            <input asp-for="BangGia.NgayBatDau" class="form-control" type="date" />
+            <span asp-validation-for="BangGia.NgayBatDau" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="NgayKetThuc" class="form-label">Ngày Kết Thúc</label>
+            <input asp-for="BangGia.NgayKetThuc" class="form-control" type="date" />
+            <span asp-validation-for="BangGia.NgayKetThuc" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">@ViewData["Title"]</button>
+        <a href="@Url.Page("/BangGiaIndex")" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>
+</body>
+</html>
