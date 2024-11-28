@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>King Koi Admin</title>
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+          name="viewport" />
+    <link rel="icon"
+          href="~/img/logo.png"
+          type="image/x-icon" />
+
+    <!-- Fonts and icons -->
+    <script src="~/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+        WebFont.load({
+            google: { families: ["Public Sans:300,400,500,600,700"] },
+            custom: {
+                families: [
+                    "Font Awesome 5 Solid",
+                    "Font Awesome 5 Regular",
+                    "Font Awesome 5 Brands",
+                    "simple-line-icons",
+                ],
+                urls: ["~/css/fonts.min.css"],
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            },
+        });
+    </script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/plugins.min.css" />
+    <link rel="stylesheet" href="~/css/kaiadmin.min.css" />
+
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="~/css/demo.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar" data-background-color="dark">
+            <div class="sidebar-logo">
+           
+                <!-- Logo Header -->
+                <div class="logo-header" data-background-color="dark">
+                    <span class="adminkingkoi">KingKoiAdmin</span>
+                    <div class="nav-toggle">
+                        <button class="btn btn-toggle toggle-sidebar">
+                            <i class="gg-menu-right"></i>
+                        </button>
+                        <button class="btn btn-toggle sidenav-toggler">
+                            <i class="gg-menu-left"></i>
+                        </button>
+                    </div>
+                    <button class="topbar-toggler more">
+                        <i class="gg-more-vertical-alt"></i>
+                    </button>
+                </div>
+                <!-- End Logo Header -->
+            </div>
+            <div class="sidebar-wrapper scrollbar scrollbar-inner">
+                <div class="sidebar-content">
+                    <ul class="nav nav-secondary">
+                        <li class="nav-item active">
+                            <a data-bs-toggle="collapse"
+                               href="#dashboard"
+                               class="collapsed"
+                               aria-expanded="false">
+                                <i class="fas fa-home"></i>
+                                <p>Tổng Quan</p>
+                                <span class="caret"></span>
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a data-bs-toggle="collapse" href="#customers">
+                                <i class="fas fa-address-card"></i>
+                                <p>Quản Lý Khách Hàng</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="customers">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="">
+                                            <span class="sub-item">Khách Hàng</span>
+                                        </a>
+
+                                        <a href="">
+                                            <span class="sub-item">Phản Hồi</span>
+                                        </a>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a data-bs-toggle="collapse" href="#employee">
+                                <i class="fas fa-user"></i>
+                                <p>Quản Lý Nhân Viên</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="employee">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="">
+                                            <span class="sub-item">Nhân Viên</span>
+                                        </a>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a data-bs-toggle="collapse" href="#order">
+                                <i class="fas fa-pen-square"></i>
+                                <p>Quản Lý Đơn Hàng</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="order">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="">
+                                            <span class="sub-item">Chi Tiết Đơn Hàng</span>
+                                        </a>
+                                        <a href="">
+                                            <span class="sub-item">Bảng Gía</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a data-bs-toggle="collapse" href="#shipping">
+                                <i class="fas fa-shipping-fast"></i>
+                                <p>Quản Lý Vận Chuyển</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="shipping">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="l">
+                                            <span class="sub-item">Dịch Vụ Vận Chuyển</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a data-bs-toggle="collapse" href="#koifish">
+                                <i class="fas fa-fish"></i>
+                                <p>Koi</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="koifish">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="l">
+                                            <span class="sub-item">Cá Koi</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+
+
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <div>
+        @RenderBody();
+        <style>
+            /* Styling the container */
+            .sidebar-logo {
+                text-align: center;
+                padding: 0px;
+                background-color: #1e1e2d; /* Dark background color */
+            }
+
+            /* Styling the text */
+            .adminkingkoi {
+                font-size: 1.5rem; /* Larger font size */
+                font-weight: 700; /* Bold text */
+                color: #ffffff; /* White text */
+      
+                letter-spacing: 2px; /* Add spacing between letters */
+                font-family: 'Arial', sans-serif; /* Choose a clean font */
+            }
+
+                /* Add hover effect for interactivity */
+                .adminkingkoi:hover {
+                    color: #ffcc00; /* Highlight text with gold color on hover */
+                    cursor: pointer;
+                    transition: color 0.3s ease-in-out; /* Smooth transition */
+                }
+        </style>
+    </div>
+    <!--   Core JS Files   -->
+    <script src="~/js/core/jquery-3.7.1.min.js"></script>
+    <script src="~/js/core/popper.min.js"></script>
+    <script src="~/js/core/bootstrap.min.js"></script>
+
+    <!-- jQuery Scrollbar -->
+    <script src="~/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+    <!-- Chart JS -->
+    <script src="~/js/plugin/chart.js/chart.min.js"></script>
+
+    <!-- jQuery Sparkline -->
+    <script src="~/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Chart Circle -->
+    <script src="~/js/plugin/chart-circle/circles.min.js"></script>
+
+    <!-- Datatables -->
+    <script src="~/js/plugin/datatables/datatables.min.js"></script>
+
+
+    <!-- jQuery Vector Maps -->
+    <script src="~/js/plugin/jsvectormap/jsvectormap.min.js"></script>
+    <script src="~/js/plugin/jsvectormap/world.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="~/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Kaiadmin JS -->
+    <script src="~/js/kaiadmin.min.js"></script>
+
+    <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+    <script>
+        $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
+            type: "line",
+            height: "70",
+            width: "100%",
+            lineWidth: "2",
+            lineColor: "#177dff",
+            fillColor: "rgba(23, 125, 255, 0.14)",
+        });
+
+        $("#lineChart2").sparkline([99, 125, 122, 105, 110, 124, 115], {
+            type: "line",
+            height: "70",
+            width: "100%",
+            lineWidth: "2",
+            lineColor: "#f3545d",
+            fillColor: "rgba(243, 84, 93, .14)",
+        });
+
+        $("#lineChart3").sparkline([105, 103, 123, 100, 95, 105, 115], {
+            type: "line",
+            height: "70",
+            width: "100%",
+            lineWidth: "2",
+            lineColor: "#ffa534",
+            fillColor: "rgba(255, 165, 52, .14)",
+        });
+    </script>
+</body>
+</html>
